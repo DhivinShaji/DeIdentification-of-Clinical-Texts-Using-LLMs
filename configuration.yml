@@ -1,0 +1,78 @@
+project_name: Masking v1
+project_start_date: 30/05/2019
+project_owner: Nikola Milosevic
+project_owner_contact: nikola.milosevic@manchester.ac.uk
+
+entity:   
+  NAME:
+    algorithm: #NER_CRF_dictionaries 
+      algorithm1: MedCAT
+      algorithm2: NER_BERT
+    resolution: union
+    masking_type: Mask
+    masking_class: mask_name_simple
+      
+  DATE:
+    algorithm: #NER_CRF_dictionaries
+      algorithm1: MedCAT
+      algorithm2: NER_BERT
+    resolution: union
+    masking_type: Mask
+    masking_class: Mask_date_simple
+    
+  CONTACT:
+    algorithm: #NER_CRF_dictionaries 
+      algorithm1: MedCAT
+      algorithm2: NER_BERT
+    resolution: union
+    masking_type: Mask
+    masking_class: mask_contact_simple
+      
+  AGE:
+    algorithm: #NER_CRF_dictionaries 
+      algorithm1: MedCAT
+      algorithm2: NER_BERT
+    resolution: union
+    masking_type: Mask
+    masking_class: mask_age_simple
+      
+  LOCATION:
+    algorithm: #NER_CRF_dictionaries 
+      algorithm1: MedCAT
+      algorithm2: NER_BERT
+    resolution: union
+    masking_type: Mask
+    masking_class: mask_location_simple
+      
+  # PROFESSION:
+  #   algorithMedCAT m: #NER_BERT 
+    #   algorithm1: MedCAT
+    #   algorithm2: NER_BERT
+    # resolution: union
+  #   masking_type: Mask
+  #   masking_class: Mask_profession_simple
+
+  ID:
+    algorithm: #NER_CRF_dictionaries 
+      algorithm1: MedCAT
+      algorithm2: NER_BERT
+    resolution: union
+    masking_type: Mask
+    masking_class: mask_id_simple
+  
+  # PHI:
+  #   algorithMedCAT m: #NER_BERT 
+    #   algorithm1: MedCAT
+    #   algorithm2: NER_BERT
+    # resolution: union
+  #   masking_type: Mask
+  #   masking_class: Mask_phi_simple
+      
+
+## paths to trainning folders
+dataset_location: dataset/input
+data_output: dataset/output
+csv_output: dataset/output
+
+# uncomment next line if you wich ehost compatible files to be created and saved
+# ehost_output: dataset/ehost_MASK_outputs
